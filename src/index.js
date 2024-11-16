@@ -2,7 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
-import { createBrowserRouter } from 'react-router-dom';
+import { createBrowserRouter , RouterProvider } from 'react-router-dom';
+import Layout from './pages/Layout';
+import Error from './pages/Error';
+import About from './pages/About';
+import Contact from './pages/Contact'
  
 
  //by using this one we are create routes
@@ -19,13 +23,7 @@ let router = createBrowserRouter([
 
       {
         path: "about",
-        element: <About />,
-        children:[
-          {
-            path:"hello",
-            element:<TermsandPolicy/>
-          }
-        ]
+        element: <About />
       },
       {
         path: "contact",

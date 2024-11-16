@@ -1,0 +1,82 @@
+/* Basic Styling */
+.container-Navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.05);
+}
+
+.navbar-link {
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+}
+
+.NavText {
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+    margin: 0 10px;
+    padding: 10px 15px;
+}
+
+.NavText:hover {
+    color: rgb(103, 97, 97);
+    border-radius: 10px;
+}
+
+/* Styling for the logo */
+.download-logo {
+    background: url(../images/lOGO.jpg);
+    float: left;
+    height: 60px;
+    width: 65px;
+    background-size: 74px 66px;
+}
+
+/* Mobile Styling */
+.menu-toggle {
+    display: none; /* Hidden on larger screens */
+    cursor: pointer;
+    font-size: 24px;
+    color: black;
+    margin-left: auto;
+}
+
+/* Media Queries for Mobile */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* Show the toggle button on smaller screens */
+    }
+
+    /* Navbar links are hidden by default on mobile */
+    .navbar-link {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        background-color: #fff;
+        position: absolute;
+        top: 60px; /* Adjust position below the navbar */
+        left: 0;
+        right: 0;
+        padding: 10px 0;
+        box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.1);
+    }
+
+    /* Show navbar links when `visible` class is added */
+    .navbar-link.visible {
+        display: flex;
+    }
+
+    .NavText {
+        margin: 10px 0;
+        font-size: 18px;
+    }
+}
